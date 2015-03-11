@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.EditText;
 
 
@@ -52,5 +56,14 @@ public class MyActivity extends ActionBarActivity {
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+    }
+
+    public void showWebView(View view) {
+        // Do something in response to button
+        WebView wv = (WebView)findViewById(R.id.webView);
+        wv.setWebChromeClient(new WebChromeClient());
+        wv.setWebViewClient(new WebViewClient());
+        wv.getSettings().setJavaScriptEnabled(true);
+        wv.loadUrl("http://www.baidu.com");
     }
 }

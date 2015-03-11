@@ -1,4 +1,4 @@
-package com.myconpany.myfirstapp;
+package com.mycompany.myfirstapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

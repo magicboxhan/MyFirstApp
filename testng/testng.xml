@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite_MyFirstApp" parallel="false">
+    <parameter name="" value=""/>
+    <test name="Test_1" preserve-order="true">
+        <parameter name="" value=""/>
+        <classes>
+            <class name="com.mycompany.myfirstapp.MyActivityTest">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

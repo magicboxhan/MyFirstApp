@@ -1,6 +1,7 @@
 package com.mycompany.myfirstapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -50,6 +51,7 @@ public class MyActivity extends ActionBarActivity {
      * Called when the user clicks the Send button
      */
     public void sendMessage(View view) {
+        System.out.println("=== send message ===");
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -59,11 +61,20 @@ public class MyActivity extends ActionBarActivity {
     }
 
     public void showWebView(View view) {
+        System.out.println("=== show webview ===");
         // Do something in response to button
         WebView wv = (WebView)findViewById(R.id.webView);
         wv.setWebChromeClient(new WebChromeClient());
         wv.setWebViewClient(new WebViewClient());
         wv.getSettings().setJavaScriptEnabled(true);
         wv.loadUrl("http://www.baidu.com");
+    }
+
+    public void startService(View view) {
+        System.out.println("=== start service ===");
+        // Do something in response to button
+        Intent serviceIntent = new Intent(this, MyFirstService.class);
+//        serviceIntent.setData(Uri.parse(dataUrl));
+        startService(serviceIntent);
     }
 }

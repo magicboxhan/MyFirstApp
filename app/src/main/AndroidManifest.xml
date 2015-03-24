@@ -24,6 +24,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mycompany.myfirstapp.MyActivity" />
         </activity>
+        <service
+            android:name=".MyFirstService"
+            android:exported="false"/>
     </application>
 
 </manifest>

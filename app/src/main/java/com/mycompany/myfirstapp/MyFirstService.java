@@ -18,5 +18,13 @@ public class MyFirstService extends IntentService {
 //        String dataString = workIntent.getDataString();
 //        Do work here, based on the contents of dataString
         System.out.println("=== service started ===");
+        for(int i=0;i<30;i++){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(String.format("=== service loop #%d ===", i));
+        }
     }
 }

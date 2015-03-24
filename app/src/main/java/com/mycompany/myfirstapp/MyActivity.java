@@ -51,7 +51,7 @@ public class MyActivity extends ActionBarActivity {
      * Called when the user clicks the Send button
      */
     public void sendMessage(View view) {
-        System.out.println("=== send message ===");
+//        System.out.println("=== send message ===");
         // Do something in response to button
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -61,7 +61,7 @@ public class MyActivity extends ActionBarActivity {
     }
 
     public void showWebView(View view) {
-        System.out.println("=== show webview ===");
+//        System.out.println("=== show webview ===");
         // Do something in response to button
         WebView wv = (WebView)findViewById(R.id.webView);
         wv.setWebChromeClient(new WebChromeClient());
@@ -71,7 +71,7 @@ public class MyActivity extends ActionBarActivity {
     }
 
     public void startService(View view) {
-        System.out.println("=== start service ===");
+//        System.out.println("=== start service ===");
         // Do something in response to button
         Intent serviceIntent = new Intent(this, MyFirstService.class);
 //        serviceIntent.setData(Uri.parse(dataUrl));
